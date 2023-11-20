@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,7 @@
         #resultado_pedido {
             margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -59,19 +60,22 @@
         var dados_pedidos = [
             {"numero_pedido": "1", "produto": "Laptop HP EliteBook", 
                                     "data_compra": "2023-11-0", 
-                                    "quantidade": 2, 
+                                    "quantidade": 1, 
+                                    "valor_do_produto": "R$ 2.089,05", 
                                     "nome_comprador": "Ana Silva de Oliveira", 
                                     "cpf_comprador": " 123.456.789-00"},
 
             {"numero_pedido": "2", "produto": "Smartphone Samsung Galaxy S20", 
                                     "data_compra": "2023-09-05", 
-                                    "quantidade": 1, 
+                                    "quantidade": 1,
+                                    "valor_do_produto": "R$ 1.500,50",  
                                     "nome_comprador": "Carlos Oliveira da Silva", 
                                     "cpf_comprador": "987.654.321-00"},
 
             {"numero_pedido": "3", "produto": "TV LG 4K 55", 
                                     "data_compra": "2023-06-10", 
                                     "quantidade": 1, 
+                                    "valor_do_produto": "R$ 2.354,05",  
                                     "nome_comprador": "Maria Santos Ferreira", 
                                     "cpf_comprador": "456.789.123-00"},
 
@@ -79,8 +83,17 @@
             {"numero_pedido": "4", "produto": "Forno Elétrico Brastemp", 
                                     "data_compra": "2023-06-10", 
                                     "quantidade": 1, 
+                                    "valor_do_produto": "R$ 2.233,42",
                                     "nome_comprador": "João Oliveira de Ferreira", 
                                     "cpf_comprador": "789.123.456-00"},
+
+
+            {"numero_pedido": "5", "produto": "Ar Condicionado Elgin Split Inverter", 
+                                    "data_compra": "2023-11-20", 
+                                    "quantidade": 1, 
+                                    "valor_do_produto": "R$ 2.099,42",
+                                    "nome_comprador": "Matheus Oliveira de Ferreira", 
+                                    "cpf_comprador": "707.223.446-01"},
 
 
             // Adicione mais pedidos conforme necessário
@@ -95,6 +108,9 @@
             if (informacoes_pedido) {
                 resultado_div.innerHTML = "<h3>Informações do Pedido:</h3>" +
                     "<p>Produto: " + informacoes_pedido.produto + "</p>" +
+
+                    "<p>Valor do produto: " + informacoes_pedido.valor_do_produto + "</p>" +
+                    
                     "<p>Data da Compra: " + informacoes_pedido.data_compra + "</p>" +
                     "<p>Quantidade: " + informacoes_pedido.quantidade + "</p>" +
                     "<p>Nome do Comprador: " + informacoes_pedido.nome_comprador + "</p>" +
